@@ -1,0 +1,41 @@
+<div class="card ">
+	<div class="card-header card-header-rose card-header-icon">
+		<h4 class="card-title">certification form</h4>
+	</div>
+	<div class="card-body ">
+		<form (ngSubmit)="submit($event)" id="form" [formGroup]="formGroup">
+			<mat-form-field class="example-full-width">
+				<input formControlName="companyName" matInput placeholder="company name" type="text">
+			</mat-form-field>
+			<div class="form-group example-full-width">
+				<label class="bmd-label-floating">Postal Code</label>
+				<input class="form-control" type="text">
+			</div>
+			<mat-form-field class="example-full-width">
+				<input formControlName="subject" matInput placeholder="subject" type="text">
+			</mat-form-field>
+			<div class="example-full-width">
+				<legend>date get certification</legend>
+				<mat-form-field>
+					<input (click)="dateStart.open()" [matDatepicker]="dateStart" formControlName="dateStart"
+						   matInput placeholder="Choose the date start">
+					<mat-datepicker-toggle [for]="dateStart" matSuffix></mat-datepicker-toggle>
+					<mat-datepicker #dateStart></mat-datepicker>
+				</mat-form-field>
+			</div>
+			<div class="example-full-width">
+				<legend>date get certification</legend>
+				<mat-form-field>
+					<input (click)="dateEnd.open()" [matDatepicker]="dateEnd" formControlName="dateEnd" matInput
+						   placeholder="Choose the date end">
+					<mat-datepicker-toggle [for]="dateEnd" matSuffix></mat-datepicker-toggle>
+					<mat-datepicker #dateEnd></mat-datepicker>
+				</mat-form-field>
+			</div>
+			<mat-form-field class="example-full-width">
+				<input matInput placeholder="percentage of achievement" type="text">
+			</mat-form-field>
+			<button class="btn btn-fill btn-success" mat-raised-button type="submit">add internship</button>
+		</form>
+	</div>
+</div>

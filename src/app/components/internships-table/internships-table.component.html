@@ -1,0 +1,35 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+    <tr>
+      <th class="text-center">sujet de stage</th>
+      <th>nom de la société</th>
+      <th>data début de stage</th>
+      <th>date fin de stage</th>
+      <th class="text-right">percentage d'avancement</th>
+		<th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of rows">
+      <td class="text-center">{{row.subject}}</td>
+      <td>{{row.companyName}}</td>
+      <td>{{row.dateStart | date}}</td>
+      <td>{{row.dateEnd | date}}</td>
+      <td class="text-right">
+        <div class="progress">
+          <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{row.percentageAchievement}}"
+               class="progress-bar " [ngClass]="{'bg-danger': row.percentageAchievement < 20,
+               'bg-warning': row.percentageAchievement > 20 && row.percentageAchievement <=50,
+               'bg-info': row.percentageAchievement > 50 && row.percentageAchievement < 70,
+               'bg-success': row.percentageAchievement > 70}"
+               role="progressbar" [style.width]="row.percentageAchievement"></div>
+        </div>
+      </td>
+            <td class="text-right">
+              		<button mat-raised-button class="btn btn-danger"><em class="material-icons">trash</em></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

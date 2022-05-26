@@ -1,0 +1,33 @@
+<div class="table-responsive">
+  <table class="table" aria-describedby="table of intersect">
+    <thead>
+    <tr>
+      <th class="text-center">titre de compétition</th>
+      <th>sujet de la compétition</th>
+      <th>data de participation</th>
+      <th class="text-right">percentage d'avancement</th>
+		<th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of rows">
+      <td class="text-center">{{row.title}}</td>
+      <td>{{row.subject}}</td>
+      <td>{{row.dateParticipation | date}}</td>
+      <td>
+        <div class="progress">
+          <div [ngClass]="{'bg-danger': row.percentageAchievement < 20,
+               'bg-warning': row.percentageAchievement > 20 && row.percentageAchievement <=50,
+               'bg-info': row.percentageAchievement > 50 && row.percentageAchievement < 70,
+               'bg-success': row.percentageAchievement > 70}" [style.width]="row.percentageAchievement" aria-valuemax="100"
+               aria-valuemin="0" aria-valuenow="{{row.percentageAchievement}}"
+               class="progress-bar " role="progressbar"></div>
+        </div>
+      </td>
+      <td class="text-right">
+		<button mat-raised-button class="btn btn-danger"><em class="material-icons">trash</em></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

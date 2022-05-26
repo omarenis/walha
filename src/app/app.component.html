@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-header card-header-icon card-header-rose">
               <div class="card-icon">
-                <i class="material-icons">perm_identity</i>
+                <em class="material-icons">perm_identity</em>
               </div>
               <h4 class="card-title">Edit Profile -
                 <small class="category">Complete your profile</small>
@@ -102,19 +102,71 @@
                 <input name="..." type="file" formControlName="image"/>
         </span>
                 <br/>
-                <a class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" href="#pablo"><i
-                  class="fa fa-times"></i> Remove</a>
+                <a class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" href="#pablo">
+                  <em class="fa fa-times"></em> Remove</a>
               </div>
             </div>
             <div class="card-body">
               <h6 class="card-category text-gray">CEO / Co-Founder</h6>
               <h4 class="card-title">Alec Thompson</h4>
-              <textarea cols="30" formControlName="description" id="" name="" rows="10"></textarea>
+              <textarea class="form-control" cols="30" formControlName="description" id="" name="description" rows="10"></textarea>
               <button class="btn btn-rose btn-round">Follow</button>
             </div>
           </div>
         </div>
       </div>
+      <div class="card ">
+          <div class="card-body ">
+            <ul class="nav nav-pills nav-pills-warning d-flex justify-content-end" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#competitions" role="tablist">
+                  Competiton
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#traningcourses" role="tablist">
+                  formation
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#internships" role="tablist">
+                  Expérience
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#certifications" role="tablist">
+                  Certifications
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#competences" role="tablist">
+                  Compétence
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content tab-space">
+              <div class="tab-pane active" id="competitions">
+                <div class="card">
+                    <div class="card-body">
+						<button></button>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="traningcourses">
+
+              </div>
+              <div class="tab-pane" id="internships">
+
+              </div>
+              <div class="tab-pane" id="certifications">
+
+              </div>
+              <div class="tab-pane" id="competences">
+
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </app-admin>

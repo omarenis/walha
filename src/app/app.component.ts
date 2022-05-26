@@ -4,12 +4,7 @@ import {AbstractRestService} from "../services/genericservice";
 import {SecureStorageService} from "../services/secure-storage.service";
 
 
-interface Localisation
-{
-  country: string;
-  city: string;
-  zipCode: string;
-}
+
 interface User
 {
   firstname: string;

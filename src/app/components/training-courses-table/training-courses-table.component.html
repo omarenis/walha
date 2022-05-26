@@ -1,0 +1,24 @@
+<div class="table-responsive">
+  <table class="table" describedby="table de participation au formations">
+    <thead>
+    <tr>
+      <th class="text-center">titre de la formation</th>
+      <th>école qui hoste la formation</th>
+      <th>data début de formation</th>
+      <th>date fin de formation</th>
+      <th class="text-right"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let row of rows">
+      <td class="text-center">{{row.trainingCourse.title}}</td>
+      <td class="text-center">{{row.trainingCourse.school}}</td>
+      <td class="text-center">{{row.dateStart | date}}</td>
+      <td class="text-center">{{row.dateEnd | date}}</td>
+		<td class="text-right">
+					<button mat-raised-button class="btn btn-danger"><em class="material-icons">trash</em></button>
+		</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
