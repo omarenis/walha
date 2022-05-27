@@ -3,7 +3,7 @@
 		<h4 class="card-title">certification form</h4>
 	</div>
 	<div class="card-body ">
-		<form (ngSubmit)="submit($event)" id="form">
+		<form (ngSubmit)="submit($event)" id="form" [formGroup]="formGroup">
 			<div class="example-full-width">
 				<legend>Image of the certification</legend>
 				<div class="fileinput fileinput-new text-center" data-provides="fileinput">
@@ -15,7 +15,7 @@
                                 <span class="btn btn-rose btn-round btn-file">
                                     <span class="fileinput-new">Select image</span>
                                     <span class="fileinput-exists">Change</span>
-                                    <input name="..." type="file"/>
+                                    <input name="..." type="file" formControlName="image"/>
                                 </span>
 						<a class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" href="#pablo"><i
 							class="fa fa-times"></i> Remove</a>
@@ -39,7 +39,10 @@
 			<mat-form-field class="example-full-width">
 				<input matInput placeholder="Password" type="password">
 			</mat-form-field>
+			<div class="d-flex justify-content-between">
+							<button class="btn btn-fill btn-success" mat-raised-button type="submit">add certification</button>
 			<button class="btn btn-fill btn-success" mat-raised-button type="submit">add certification</button>
+			</div>
 		</form>
 	</div>
 </div>

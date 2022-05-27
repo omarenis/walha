@@ -1,4 +1,5 @@
-export class TrainingCourse {
-  title: string;
-  school: string;
+export interface TrainingCourse {
+	title: string;
+	school: string;
+	id?: number;
 }

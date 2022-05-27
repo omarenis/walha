@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Competition} from "../../models/competition";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {Certification} from "../../models/certification";
 
 @Component({
   selector: 'app-competitions-form',
@@ -9,7 +11,8 @@ import {Competition} from "../../models/competition";
 })
 export class CompetitionsFormComponent implements OnInit {
 	formGroup !: FormGroup;
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<CompetitionsFormComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Certification,) { }
 
   ngOnInit(): void {
   	this.formGroup = new FormGroup(

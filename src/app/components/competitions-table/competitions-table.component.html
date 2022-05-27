@@ -15,17 +15,19 @@
       <td>{{row.subject}}</td>
       <td>{{row.dateParticipation | date}}</td>
       <td>
-        <div class="progress">
+        <div class="progress" style="height: 30px">
           <div [ngClass]="{'bg-danger': row.percentageAchievement < 20,
                'bg-warning': row.percentageAchievement > 20 && row.percentageAchievement <=50,
                'bg-info': row.percentageAchievement > 50 && row.percentageAchievement < 70,
                'bg-success': row.percentageAchievement > 70}" [style.width]="row.percentageAchievement" aria-valuemax="100"
-               aria-valuemin="0" aria-valuenow="{{row.percentageAchievement}}"
-               class="progress-bar " role="progressbar"></div>
+               aria-valuemin="0"
+               class="progress-bar " role="progressbar">
+			  {{row.percentageAchievement}} %
+		  </div>
         </div>
       </td>
       <td class="text-right">
-		<button mat-raised-button class="btn btn-danger"><em class="material-icons">trash</em></button>
+		<button mat-raised-button class="btn btn-outline-danger btn-just-icon"><em class="material-icons">delete</em></button>
       </td>
     </tr>
     </tbody>

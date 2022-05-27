@@ -2,30 +2,34 @@
   <table class="table" aria-describedby="table of intersect">
     <thead>
     <tr>
-      <th class="text-center">sujet de stage</th>
-      <th>nom de la société</th>
-      <th>data début de stage</th>
+		<th class="text-center">image de certification</th>
+      <th class="text-center">titre de certification</th>
+      <th>description de la certification</th>
+      <th>data de cértification</th>
       <th>date fin de stage</th>
       <th class="text-right">percentage d'avancement</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let row of rows">
+		<td class="text-center">
+			<img [src]="row.image" alt="image de certification" class="img-thumbnail">
+		</td>
       <td class="text-center">{{row.title}}</td>
-      <td>{{row.description}}</td>
-      <td>{{row.dateBeingCertified | date}}</td>
+      <td class="text-center">{{row.description}}</td>
+      <td class="text-center">{{row.dateBeingCertified | date}}</td>
       <td>
         <div class="progress">
           <div [ngClass]="{'bg-danger': row.percentage < 20,
                'bg-warning': row.percentage > 20 && row.percentage <=50,
                'bg-info': row.percentage > 50 && row.percentage < 70,
-               'bg-success': row.percentage > 70}" [style.width]="row.percentage" aria-valuemax="100"
-               aria-valuemin="0" aria-valuenow="{{row.percentage}}"
+               'bg-success': row.percentage > 70}" [style.width]="row.percentage * 10" aria-valuemax="100"
+               aria-valuemin="0"
                class="progress-bar " role="progressbar"></div>
         </div>
       </td>
       <td class="text-right">
-
+		   <button mat-raised-button class="btn btn-danger"><em class="material-icons">delete</em></button>
       </td>
     </tr>
     </tbody>

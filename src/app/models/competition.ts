@@ -3,4 +3,5 @@ export interface Competition {
   subject: string;
   dateParticipation: Date;
   percentageAchievement: number;
+  id ?: number;
 }

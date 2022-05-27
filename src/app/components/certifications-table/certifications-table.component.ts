@@ -1,48 +1,26 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Certification} from "../../models/certification";
+import {AbstractRestService} from "../../../services/genericservice";
+import {MatDialog} from '@angular/material/dialog';
+import {CertificationFormComponent} from "../certification-form/certification-form.component";
 
 @Component({
-  selector: 'app-certifications-table',
-  templateUrl: './certifications-table.component.html',
-  styleUrls: ['./certifications-table.component.css']
+	selector: 'app-certifications-table',
+	templateUrl: './certifications-table.component.html',
+	styleUrls: ['./certifications-table.component.css']
 })
-export class CertificationsTableComponent implements OnInit {
-  rows: Certification[] = [{
-    title: 'certification 1',
-    description: 'description of certification 1',
-    dateBeingCertified: new Date('2017-01-02'),
-    image: '/assets/img/certificate.png'
-  }, {
-    title: 'certification 1',
-    description: 'description of certification 1',
-    dateBeingCertified: new Date('2017-01-02'),
-    image: '/assets/img/certificate.png'
-  }, {
-    title: 'certification 1',
-    description: 'description of certification 1',
-    dateBeingCertified: new Date('2017-01-02'),
-    image: '/assets/img/certificate.png'
-  }, {
-    title: 'certification 1',
-    description: 'description of certification 1',
-    dateBeingCertified: new Date('2017-01-02'),
-    image: '/assets/img/certificate.png'
-  }, {
-    title: 'certification 1',
-    description: 'description of certification 1',
-    dateBeingCertified: new Date('2017-01-02'),
-    image: '/assets/img/certificate.png'
-  }, {
-    title: 'certification 1',
-    description: 'description of certification 1',
-    dateBeingCertified: new Date('2017-01-02'),
-    image: '/assets/img/certificate.png'
-  }];
+export class CertificationsTableComponent{
+	@Input() rows ?: Certification[];
+	constructor(private abstractRestService: AbstractRestService<Certification>, public dialog: MatDialog) {
+	}
 
-  constructor() {
-  }
+	openDialog(): void {
+		const dialogRef = this.dialog.open(CertificationFormComponent, {
+			width: '250px',
+		});
 
-  ngOnInit(): void {
-  }
-
+		dialogRef.afterClosed().subscribe(result => {
+			console.log(result);
+		});
+	}
 }

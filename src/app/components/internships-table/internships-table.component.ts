@@ -7,7 +7,7 @@ import {Internship} from "../../models/internship";
   styleUrls: ['./internships-table.component.css']
 })
 export class InternshipsTableComponent implements OnInit {
-  @Input() rows !: Internship[];
+  @Input() rows ?: Internship[];
   constructor() { }
 
   ngOnInit(): void {

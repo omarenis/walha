@@ -7,7 +7,7 @@ import {Participation} from "../../models/participation";
 	styleUrls: ['./training-courses-table.component.css']
 })
 export class TrainingCoursesTableComponent implements OnInit {
-	@Input() rows !: Participation[];
+	@Input() rows ?: Participation[];
 	@Input() editable: boolean = false;
 
 	constructor() {}

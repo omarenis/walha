@@ -1,172 +1,168 @@
 <app-admin>
-  <div class="main-content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-header card-header-icon card-header-rose">
-              <div class="card-icon">
-                <em class="material-icons">perm_identity</em>
-              </div>
-              <h4 class="card-title">Edit Profile -
-                <small class="category">Complete your profile</small>
-              </h4>
-            </div>
-            <div class="card-body">
-              <form [formGroup]="formGroup">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Username</label>
-                      <input class="form-control" formControlName="username" type="text">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="bmd-label-floating" formControlName="firstname">Email address</label>
-                      <input class="form-control" formControlName="email" type="email">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Fist Name</label>
-                      <input class="form-control" formControlName="firstname" type="text">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Last Name</label>
-                      <input class="form-control" formControlName="lastname" type="text">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Adress</label>
-                      <input class="form-control" formControlName="address" type="text">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="bmd-label-floating" formControlName="city">City</label>
-                      <input class="form-control" type="text">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Country</label>
-                      <input class="form-control" formControlName="country" type="text">
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="bmd-label-floating">Postal Code</label>
-                      <input class="form-control" formControlName="zipCode" type="text">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>About Me</label>
-                      <div class="form-group">
-                        <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two
-                          seat Lambo.</label>
-                        <textarea class="form-control" formControlName="about" rows="5"></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="btn btn-rose pull-right" mat-raised-button type="submit">Update Profile</button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-profile">
-            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
-              <div class="fileinput-new thumbnail img-circle">
-                <img alt="..." src="/assets/img/faces/marc.jpg">
-              </div>
-              <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
-              <div>
+	<div class="main-content">
+		<div class="container-fluid">
+			<form (ngSubmit)="submit($event)" [formGroup]="formGroup" class="row">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header card-header-icon card-header-rose">
+							<div class="card-icon">
+								<em class="material-icons">perm_identity</em>
+							</div>
+							<h4 class="card-title">change le profile</h4>
+						</div>
+						<div class="card-body">
+							<div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="form-group">
+											<label class="bmd-label-floating">Username</label>
+											<input class="form-control" formControlName="username" type="text">
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="form-group">
+											<label class="bmd-label-floating"> addresse email</label>
+											<input class="form-control" formControlName="email" type="email">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="form-group">
+											<label class="bmd-label-floating">nom</label>
+											<input class="form-control" formControlName="firstname" type="text">
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="form-group">
+											<label class="bmd-label-floating">prénom</label>
+											<input class="form-control" formControlName="lastname" type="text">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="bmd-label-floating">City</label>
+											<input class="form-control" formControlName="city" type="text">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="bmd-label-floating">Country</label>
+											<input class="form-control" formControlName="country" type="text">
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="bmd-label-floating">Postal Code</label>
+											<input class="form-control" formControlName="zipCode" type="text">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>About Me</label>
+											<div class="form-group">
+												<textarea class="form-control" formControlName="about"
+														  rows="5"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button class="btn btn-rose pull-right" mat-raised-button type="submit">Update Profile
+								</button>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card card-profile">
+						<div class="fileinput fileinput-new text-center" data-provides="fileinput">
+							<div class="fileinput-new thumbnail img-circle">
+								<img alt="..." src="/assets/img/faces/marc.jpg">
+							</div>
+							<div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+							<div>
         <span class="btn btn-round btn-rose btn-file">
             <span class="fileinput-new">Add Photo</span>
             <span class="fileinput-exists">Change</span>
-                <input name="..." type="file" formControlName="image"/>
+                <input formControlName="imageProfile" name="..." type="file"/>
         </span>
-                <br/>
-                <a class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput" href="#pablo">
-                  <em class="fa fa-times"></em> Remove</a>
-              </div>
-            </div>
-            <div class="card-body">
-              <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-              <h4 class="card-title">Alec Thompson</h4>
-              <textarea class="form-control" cols="30" formControlName="description" id="" name="description" rows="10"></textarea>
-              <button class="btn btn-rose btn-round">Follow</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card ">
-          <div class="card-body ">
-            <ul class="nav nav-pills nav-pills-warning d-flex justify-content-end" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#competitions" role="tablist">
-                  Competiton
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#traningcourses" role="tablist">
-                  formation
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#internships" role="tablist">
-                  Expérience
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#certifications" role="tablist">
-                  Certifications
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#competences" role="tablist">
-                  Compétence
-                </a>
-              </li>
-            </ul>
-            <div class="tab-content tab-space">
-              <div class="tab-pane active" id="competitions">
-                <div class="card">
-                    <div class="card-body">
-						<button></button>
-                    </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="traningcourses">
+								<br/>
+								<a class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"
+								   href="#pablo">
+									<em class="fa fa-times"></em> Remove</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<h6 class="card-category text-gray">Student</h6>
+							<h4 class="card-title">{{formGroup.value.username}}</h4>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="bmd-label-floating">Addresse</label>
+										<input class="form-control" formControlName="address" type="text">
+									</div>
+								</div>
+							</div>
+							<textarea class="form-control" cols="30" formControlName="description" id=""
+									  name="description" rows="10"></textarea>
+							<button class="btn btn-rose btn-round">Follow</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="card ">
+				<div class="card-body ">
+					<ul class="nav nav-pills nav-pills-warning d-flex justify-content-end" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#competitions" role="tablist">
+								Competiton
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#traningcourses" role="tablist">
+								formation
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#internships" role="tablist">
+								Expérience
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#certifications" role="tablist">
+								Certifications
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#competences" role="tablist">
+								Compétence
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content tab-space">
+						<div class="tab-pane active" id="competitions">
+							<app-competitions-table [rows]="user.competitions"></app-competitions-table>
+						</div>
+						<div class="tab-pane" id="traningcourses">
+							<app-training-courses-table [rows]="user.participationList"></app-training-courses-table>
+						</div>
+						<div class="tab-pane" id="internships">
+							<app-internships-table [rows]="user.internships"></app-internships-table>
+						</div>
+						<div class="tab-pane" id="certifications">
+							<app-certifications-table [rows]="user.certifications"></app-certifications-table>
+						</div>
+						<div class="tab-pane" id="competences">
 
-              </div>
-              <div class="tab-pane" id="internships">
-
-              </div>
-              <div class="tab-pane" id="certifications">
-
-              </div>
-              <div class="tab-pane" id="competences">
-
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </app-admin>
