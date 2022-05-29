@@ -19,6 +19,12 @@ import { TrainingCourseFormComponent } from './components/training-course-form/t
 import { CompetitionsTableComponent } from './components/competitions-table/competitions-table.component';
 import { CompetitionsFormComponent } from './components/competitions-form/competitions-form.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { ProfileComponent } from './screens/profile/profile.component';
+import { GeneralProfileComponent } from './screens/general-profile/general-profile.component';
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatNativeDateModule} from "@angular/material/core";
+import {OverlayContainer} from "@angular/cdk/overlay";
 
 @NgModule({
   declarations: [
@@ -31,19 +37,24 @@ import {MatDialogModule} from "@angular/material/dialog";
     InternshipFormComponent,
     TrainingCourseFormComponent,
     CompetitionsTableComponent,
-    CompetitionsFormComponent
+    CompetitionsFormComponent,
+    ProfileComponent,
+    GeneralProfileComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         MatButtonModule,
+		BrowserAnimationsModule,
         ReactiveFormsModule,
         HttpClientModule,
         MatFormFieldModule,
         MatCheckboxModule,
         MatInputModule,
         MatDatepickerModule,
-		MatDialogModule
+        MatDialogModule,
+        MatProgressBarModule,
+		MatNativeDateModule
     ],
   providers: [],
   bootstrap: [AppComponent]

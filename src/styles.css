@@ -3,3 +3,8 @@
 {
 	color: #9aa506;
 }
+.mat-datepicker-content{    z-index: 1200}
+::ng-deep .cdk-overlay-container {
+	position: fixed !important;
+  z-index: 1200 !important;
+}

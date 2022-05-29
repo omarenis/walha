@@ -14,4 +14,7 @@ export class CompetitionsTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+	openDialog() {
+
+	}
 }

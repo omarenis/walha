@@ -1,35 +1,42 @@
-<div class="table-responsive">
-  <table class="table" aria-describedby="table of intersect">
-    <thead>
-    <tr>
-      <th class="text-center">titre de compétition</th>
-      <th>sujet de la compétition</th>
-      <th>data de participation</th>
-      <th class="text-right">percentage d'avancement</th>
-		<th></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let row of rows">
-      <td class="text-center">{{row.title}}</td>
-      <td>{{row.subject}}</td>
-      <td>{{row.dateParticipation | date}}</td>
-      <td>
-        <div class="progress" style="height: 30px">
-          <div [ngClass]="{'bg-danger': row.percentageAchievement < 20,
-               'bg-warning': row.percentageAchievement > 20 && row.percentageAchievement <=50,
-               'bg-info': row.percentageAchievement > 50 && row.percentageAchievement < 70,
-               'bg-success': row.percentageAchievement > 70}" [style.width]="row.percentageAchievement" aria-valuemax="100"
-               aria-valuemin="0"
-               class="progress-bar " role="progressbar">
-			  {{row.percentageAchievement}} %
-		  </div>
-        </div>
-      </td>
-      <td class="text-right">
-		<button mat-raised-button class="btn btn-outline-danger btn-just-icon"><em class="material-icons">delete</em></button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+<div class="card ">
+	<div class="card-header d-flex flex-row justify-content-around align-items-center">
+		<h4 class="card-title">la liste des competitions</h4>
+		<button (click)="openDialog()" class="btn btn-success">ajouter competition</button>
+	</div>
+	<div class="card-body">
+		<div class="table-responsive">
+			<table aria-describedby="table of intersect" class="table">
+				<thead>
+				<tr>
+					<th class="text-center">titre de compétition</th>
+					<th>sujet de la compétition</th>
+					<th>data de participation</th>
+					<th class="text-right">percentage d'avancement</th>
+					<th></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr *ngFor="let row of rows">
+					<td class="text-center">{{row.title}}</td>
+					<td>{{row.subject}}</td>
+					<td>{{row.dateParticipation | date}}</td>
+					<td>
+						<mat-progress-bar [color]="row.percentageAchievement < 20 ? 'warn' : (row.percentageAchievement > 20 && row.percentageAchievement <=50 ? undefined : (row.percentageAchievement > 50 && row.percentageAchievement < 70 ? 'primary' : 'accent'))"
+										  [style.width]="row.percentageAchievement"
+										  class="progress-bar "
+										  mode="determinate"
+										  style="height: 20px"
+										  value="{{row.percentageAchievement}}">
+							{{row.percentageAchievement}} %
+						</mat-progress-bar>
+					</td>
+					<td class="text-right">
+						<button class="btn btn-outline-danger btn-just-icon" mat-raised-button><em
+							class="material-icons">delete</em></button>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>

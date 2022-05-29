@@ -31,8 +31,8 @@ export class CompetitionsFormComponent implements OnInit {
 			title: this.formGroup.value.title,
 			subject: this.formGroup.value.subject,
 			dateParticipation: new Date(this.formGroup.value.dateParticipation),
-			percentageAchievement: Number(this.formGroup.value.percentageAchievement)
-
+			percentageAchievement: Number(this.formGroup.value.percentageAchievement),
+			studentId: 1
 		};
 		console.log(competition);
 	}

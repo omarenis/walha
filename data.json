@@ -1,0 +1,253 @@
+{
+  "users": [
+    {
+      "id": 1,
+		"lastInternshipId": 5,
+		"lastParticipationId": 65431354,
+      "imageProfile": "/assets/img/faces/marc.jpg",
+      "dateJoined": "2015-01-01",
+      "dateLastUpdate": "2015-01-01",
+      "firstname": "triki",
+      "lastname": "omar",
+      "email": "omartriki712@gmail.com",
+      "username": "omartriki712",
+      "description": "",
+      "localisation": {
+        "country": "tunisie",
+        "city": "sfax",
+        "zipCode": "3093"
+      },
+      "about": "I'm good in python, java and c++",
+      "address": "Tunisie sfax 3093"
+    }
+  ],
+  "internships": [
+    {
+      "subject": "this is a subject for internship 1",
+      "description": "this is a description for internship1",
+      "companyName": "djagora",
+      "dateStart": "2014-02-01",
+      "dateEnd": "2014-03-01",
+      "percentageAchievement": 80,
+      "id": 1,
+      "studentId": 1
+    },
+    {
+      "subject": "this is a subject for internship 1",
+      "description": "this is a description for internship1",
+      "companyName": "djagora",
+      "dateStart": "2014-02-01",
+      "dateEnd": "2014-03-01",
+      "percentageAchievement": 80,
+      "id": 1,
+      "studentId": 1
+    },
+    {
+      "subject": "this is a subject for internship 1",
+      "description": "this is a description for internship1",
+      "companyName": "djagora",
+      "dateStart": "2014-02-01",
+      "dateEnd": "2014-03-01",
+      "percentageAchievement": 80,
+      "id": 2,
+      "studentId": 1
+    },
+    {
+      "subject": "this is a subject for internship 1",
+      "description": "this is a description for internship1",
+      "companyName": "djagora",
+      "dateStart": "2014-02-01",
+      "dateEnd": "2014-03-01",
+      "percentageAchievement": 80,
+      "id": 3,
+      "studentId": 1
+    },
+    {
+      "subject": "this is a subject for internship 1",
+      "description": "this is a description for internship1",
+      "companyName": "djagora",
+      "dateStart": "2014-02-01",
+      "dateEnd": "2014-03-01",
+      "percentageAchievement": 80,
+      "id": 4,
+      "studentId": 1
+    },
+    {
+      "subject": "this is a subject for internship 1",
+      "description": "this is a description for internship1",
+      "companyName": "djagora",
+      "dateStart": "2014-02-01",
+      "dateEnd": "2014-03-01",
+      "percentageAchievement": 80,
+      "id": 1,
+      "studentId": 1
+    },
+    {
+      "subject": "5/12/2022",
+      "companyName": "enis",
+      "description": "efùpgùegknùekn",
+      "dateStart": "2022-05-18T23:00:00.000Z",
+      "dateEnd": "2022-05-05T23:00:00.000Z",
+      "percentageAchievement": "50",
+      "studentId": 1,
+      "id": 5
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "title": "certification 1",
+      "description": "description of certification 1",
+      "dateBeingCertified": "2017-01-02",
+      "image": "/assets/img/certificate.png",
+      "percentage": 15,
+      "studentId": 1
+    },
+    {
+      "id": 2,
+      "title": "certification 2",
+      "description": "description of certification 2",
+      "dateBeingCertified": "2017-05-02",
+      "image": "/assets/img/certificate.png",
+      "percentage": 25,
+      "studentId": 1
+    },
+    {
+      "id": 4,
+      "title": "certification 1",
+      "description": "description of certification 1",
+      "dateBeingCertified": "2017-01-02",
+      "image": "/assets/img/certificate.png",
+      "percentage": 15,
+      "studentId": 1
+    },
+    {
+      "id": 6,
+      "title": "certification 1",
+      "description": "description of certification 1",
+      "dateBeingCertified": "2017-01-02",
+      "image": "/assets/img/certificate.png",
+      "percentage": 15,
+      "studentId": 1
+    },
+    {
+      "id": 5000,
+      "image": "",
+      "title": "certification 2",
+      "description": "lugliugmogumogmogomg",
+      "dateBeingCertified": "2022-05-10T23:00:00.000Z",
+      "percentage": 80
+    },
+    {
+      "id": 50,
+      "image": "",
+      "title": "certification 2",
+      "description": "egeùoigheomioieh",
+      "dateBeingCertified": "2022-05-19T23:00:00.000Z",
+      "percentage": 80,
+      "studentId": 1
+    }
+  ],
+  "participationList": [
+    {
+      "dateStart": "2015-02-01",
+      "dateEnd": "2018-01-01",
+      "trainingCourse": {
+        "title": "traning course 1",
+        "school": "lycée 20 mars"
+      },
+      "studentId": 1
+    },
+    {
+      "dateStart": "2015-02-01",
+      "dateEnd": "2018-01-01",
+      "trainingCourse": {
+        "title": "traning course 1",
+        "school": "lycée 20 mars"
+      },
+      "studentId": 1
+    },
+    {
+      "dateStart": "2015-02-01",
+      "dateEnd": "2018-01-01",
+      "trainingCourse": {
+        "title": "traning course 1",
+        "school": "lycée 20 mars"
+      }
+    },
+    {
+      "dateStart": "2015-02-01",
+      "dateEnd": "2018-01-01",
+      "trainingCourse": {
+        "title": "traning course 1",
+        "school": "lycée 20 mars"
+      },
+      "studentId": 1
+    },
+    {
+      "dateStart": "2015-02-01",
+      "dateEnd": "2018-01-01",
+      "trainingCourse": {
+        "title": "traning course 1",
+        "school": "lycée 20 mars"
+      },
+      "studentId": 1
+    },
+    {
+      "dateStart": "2015-02-01",
+      "dateEnd": "2018-01-01",
+      "trainingCourse": {
+        "title": "traning course 1",
+        "school": "lycée 20 mars"
+      },
+      "studentId": 1
+    },
+    {
+      "id": 65431354,
+      "dateStart": "2022-05-18T23:00:00.000Z",
+      "dateEnd": "2022-05-19T23:00:00.000Z",
+      "trainingCourse": {
+        "title": "rgkgmjbmbmbmbmbm",
+        "school": "enis"
+      },
+      "studentId": 1
+    }
+  ],
+  "competitions": [
+    {
+      "title": "competion 1",
+      "subject": "subject of competion 1",
+      "dateParticipation": "2011-02-02",
+      "percentageAchievement": 24,
+      "studentId": 1
+    },
+    {
+      "title": "competion 1",
+      "subject": "subject of competion 1",
+      "dateParticipation": "2011-02-02",
+      "percentageAchievement": 24,
+      "studentId": 1
+    },
+    {
+      "title": "competion 1",
+      "subject": "subject of competion 1",
+      "dateParticipation": "2011-02-02",
+      "percentageAchievement": 24,
+      "studentId": 1
+    },
+    {
+      "title": "competition 1",
+      "subject": "subject of competion 1",
+      "dateParticipation": "2011-02-02",
+      "percentageAchievement": 24,
+      "studentId": 1
+    },
+    {
+      "title": "competion 1",
+      "subject": "subject of competion 1",
+      "dateParticipation": "2011-02-02",
+      "percentageAchievement": 24,
+      "studentId": 1
+    }
+  ]
+}

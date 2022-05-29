@@ -1,24 +1,33 @@
-<div class="table-responsive">
-  <table class="table" describedby="table de participation au formations">
-    <thead>
-    <tr>
-      <th class="text-center">titre de la formation</th>
-      <th>école qui hoste la formation</th>
-      <th>data début de formation</th>
-      <th>date fin de formation</th>
-      <th class="text-right"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let row of rows">
-      <td class="text-center">{{row.trainingCourse?.title}}</td>
-      <td class="text-center">{{row.trainingCourse?.school}}</td>
-      <td class="text-center">{{row.dateStart | date}}</td>
-      <td class="text-center">{{row.dateEnd | date}}</td>
-		<td class="text-right">
-			<button mat-raised-button class="btn btn-danger"><em class="material-icons">trash</em></button>
-		</td>
-    </tr>
-    </tbody>
-  </table>
+<div class="card">
+	<div class="card-header d-flex flex-row justify-content-around align-items-center">
+		<h4 class="card-title">la liste des formations</h4>
+		<a class="btn btn-success" routerLink="/training_courses/0" type="button">ajouter participation</a>
+	</div>
+	<div class="card-body">
+		<div class="table-responsive">
+			<table class="table" describedby="table de participation au formations">
+				<thead>
+				<tr>
+					<th class="text-center">titre de la formation</th>
+					<th class="text-center">école qui hoste la formation</th>
+					<th class="text-center">data début de formation</th>
+					<th class="text-center">date fin de formation</th>
+					<th></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr *ngFor="let row of rows; let i = index">
+					<td class="text-center">{{row.trainingCourse?.title}}</td>
+					<td class="text-center">{{row.trainingCourse?.school}}</td>
+					<td class="text-center">{{row.dateStart | date}}</td>
+					<td class="text-center">{{row.dateEnd | date}}</td>
+					<td class="text-right">
+						<button class="btn btn-outline-danger btn-just-icon" mat-raised-button><em
+							class="material-icons" (click)="delete(row.id, i)">delete</em></button>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>

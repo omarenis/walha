@@ -4,5 +4,6 @@ export interface Certification {
   dateBeingCertified: Date;
   percentage: number;
   image: string;
+  studentId: number;
   id ?: number;
 }

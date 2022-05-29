@@ -5,5 +5,6 @@ export interface Internship {
   dateStart: Date;
   dateEnd: Date;
   percentageAchievement: number;
+    studentId: number;
   id ?: number;
 }

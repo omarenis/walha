@@ -1,0 +1,121 @@
+<div class="main-content">
+	<div class="container-fluid">
+		<form (ngSubmit)="submit($event)" [formGroup]="formGroup" class="row">
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-header card-header-icon card-header-rose">
+						<div class="card-icon">
+							<em class="material-icons">perm_identity</em>
+						</div>
+						<h4 class="card-title">changer le profile</h4>
+					</div>
+					<div class="card-body">
+						<div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class="bmd-label-floating">Username</label>
+										<input class="form-control" formControlName="username" type="text">
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class="bmd-label-floating"> addresse email</label>
+										<input class="form-control" formControlName="email" type="email">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class="bmd-label-floating">nom</label>
+										<input class="form-control" formControlName="firstname" type="text">
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class="bmd-label-floating">prénom</label>
+										<input class="form-control" formControlName="lastname" type="text">
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<div class="form-group">
+										<label class="bmd-label-floating">Addresse</label>
+										<input class="form-control" formControlName="address" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="bmd-label-floating">City</label>
+										<input class="form-control" formControlName="city" type="text">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="bmd-label-floating">Country</label>
+										<input class="form-control" formControlName="country" type="text">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="bmd-label-floating">Postal Code</label>
+										<input class="form-control" formControlName="zipCode" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>About Me</label>
+										<div class="form-group">
+												<textarea class="form-control" formControlName="about"
+														  rows="5"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-success pull-right" mat-raised-button type="submit">Update
+								Profile
+							</button>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card card-profile">
+					<div class="fileinput fileinput-new text-center" data-provides="fileinput">
+						<div class="fileinput-new thumbnail img-circle">
+							<img [src]="imageProfile" alt="imageProfile">
+						</div>
+						<div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+						<div>
+        <span class="btn btn-round btn-rose btn-file">
+            <span class="fileinput-new">Add Photo</span>
+            <span class="fileinput-exists">Change</span>
+                <input name="..." type="file"/>
+        </span>
+							<br/>
+							<a class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"
+							   href="#pablo">
+								<em class="fa fa-times"></em> Remove</a>
+						</div>
+					</div>
+					<div class="card-body">
+						<h6 class="card-category text-gray">Student</h6>
+						<h4 class="card-title">{{formGroup.value.username}}</h4>
+						<div class="row">
+							<div class="col-md-12">
+
+							</div>
+						</div>
+						<p>{{formGroup.value.about}}</p>
+						<button class="btn btn-rose btn-round">Follow</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

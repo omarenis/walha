@@ -3,5 +3,6 @@ export interface Competition {
   subject: string;
   dateParticipation: Date;
   percentageAchievement: number;
+    studentId: number;
   id ?: number;
 }
